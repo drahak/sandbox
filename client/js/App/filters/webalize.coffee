@@ -1,7 +1,5 @@
 goog.provide 'App.webalize'
 
-App = App || {}
-
 ###*
  * Webalize filter
  * @use 'Hello World' | webalize	=>	'hello-world'

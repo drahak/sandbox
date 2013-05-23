@@ -8,6 +8,5 @@ goog.require 'App'
 ###
 App.bootstrap = () ->
   rootElement = goog.dom.getDocument()
-
   angular.element(rootElement).ready () ->
     angular.bootstrap rootElement, ['App']

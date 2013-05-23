@@ -18,4 +18,3 @@ module.config ($locationProvider, $routeProvider) ->
     controller: 'Libraries'
 
   $locationProvider.html5Mode(true)
-  return
