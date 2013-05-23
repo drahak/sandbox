@@ -4,7 +4,6 @@ node_modules
 
 *.js
 *.map
-Gruntfile.coffee
 
 client/build/*
 bower_components/
