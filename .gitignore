@@ -1,0 +1,11 @@
+node_modules
+.DS_Store
+.idea
+
+*.js
+*.map
+Gruntfile.coffee
+
+client/build/*
+bower_components/
+node_modules/

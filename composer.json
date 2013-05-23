@@ -1,0 +1,22 @@
+{
+	"name": "drahak/sandbox",
+	"description": "PHP (Nette) and JavaScript (AngularJS, Google Closure, Grunt) SPA sandbox",
+	"keywords": ["php", "nette", "javascript", "angularjs", "google closure", "spa", "sandbox"],
+	"homepage": "http://www.drahak.eu",
+	"license": ["CC-BY-SA"],
+	"authors": [
+		{
+			"name": "Drahomír Hanák",
+			"homepage": "http://www.drahak.eu"
+		}
+	],
+	"config": {
+		"vendor-dir": "./libs"
+	},
+	"require": {
+		"nette/nette": "2.0.10"
+	},
+	"require-dev": {
+		"nette/tester": "dev-master"
+	}
+}

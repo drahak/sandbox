@@ -1,0 +1,24 @@
+<h1>Standing on the shoulders of giants</h1>
+<section class="span3">
+	<h5>Hledat:</h5>
+	<input type="text" ng-model="search" />
+</section>
+<section class="span5">
+	<h5>Typ:</h5>
+	<select ng-model="search.type">
+		<option value="">all</option>
+		<option value="language">language</option>
+		<option value="library">library</option>
+		<option value="tool">tool</option>
+	</select>
+</section>
+<div class="clearfix"></div>
+<hr />
+<ul class="nav">
+	<li class="pull-left well span5 text-center" ng-repeat="library in libraries | filter:search">
+		<img ng-src="images/{{ library.shortName }}.png" alt="{{ library.name }}" width="200" />
+		<h4>{{ library.name }}</h4>
+		<p>{{ library.description }}</p>
+	</li>
+</ul>
+<div class="clearfix"></div>

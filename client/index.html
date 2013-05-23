@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="cs-CZ"> <![endif]-->
+<!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8" lang="cs-CZ"> <![endif]-->
+<!--[if IE 8]> <html class="no-js lt-ie9" lang="cs-CZ"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="cs-CZ"> <!--<![endif]-->
+	<head>
+		<base href="/sandbox/client/" />
+		<meta charset="UTF-8" />
+		<title>My SPA</title>
+
+		<script type="text/javascript" src="../bower_components/closure-library/closure/goog/base.js"></script>
+		<script type="text/javascript" src="../bower_components/angular/angular.min.js"></script>
+		<script type="text/javascript" src="../bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
+		<script type="text/javascript" src="../bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+		<script type="text/javascript" src="build/deps.js"></script>
+		<script type="text/javascript">
+			goog.require('App.bootstrap');
+		</script>
+
+		<link rel="stylesheet" type="text/css" href="build/app.css" />
+		<style type="text/css">
+			[ng\:cloak], [ng-cloak], .ng-cloak {
+				display: none !important;
+			}
+		</style>
+	</head>
+	<body ng-controller="App">
+		<script type="text/javascript">
+			App.bootstrap();
+		</script>
+
+		<div class="container">
+			<div class="masthead">
+
+				<h3 class="muted">SPA sandbox</h3>
+				<nav class="navbar">
+					<div class="navbar-inner">
+						<div class="container">
+							<ul class="nav">
+								<li ng-class="{active: isCurrent('/')}"><a href="">Home</a></li>
+								<li ng-class="{active: isCurrent('/libraries')}"><a href="libraries">Libraries</a></li>
+								<li ng-class="{active: isCurrent('/requirements')}"><a href="#">Requirements</a></li>
+								<li ng-class="{active: isCurrent('/quick-start')}"><a href="#">Quick start</a></li>
+								<li ng-class="{active: isCurrent('/about')}"><a href="#">About</a></li>
+							</ul>
+						</div>
+					</div>
+				</nav>
+
+			</div>
+
+			<div ng-view></div>
+
+			<hr />
+			<footer class="text-center">
+				&copy; 2013 <a href="http://www.drahak.eu" target="_blank">Drahomír Hanák</a>
+			</footer>
+		</div>
+
+	</body>
+</html>
