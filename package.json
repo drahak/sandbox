@@ -16,7 +16,7 @@
 		"grunt-contrib-coffee": "git://github.com/gruntjs/grunt-contrib-coffee.git"
 	},
 	"devDependencies": {
-		"karma": "git://github.com/karma-runner/karma.git",
+		"karma": "~0.8.5",
 		"grunt-karma": "0.4.4"
 	},
 	"license": "MIT"
