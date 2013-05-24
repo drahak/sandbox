@@ -1,6 +1,12 @@
 goog.provide 'App.AppController'
 
 class App.AppController
+
+  ###*
+  * @constructor
+  * @param {Object} scope
+  * @param {$location} $location
+  ###
   constructor: (@$scope, $location) ->
 
     ###*

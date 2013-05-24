@@ -10,6 +10,7 @@ module.controller 'Libraries', App.LibrariesController
 
 module.filter 'webalize', () -> App.webalize
 
+
 module.config ($locationProvider, $routeProvider) ->
   $routeProvider.when '/',
     templateUrl: 'js/App/views/about.html'

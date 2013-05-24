@@ -13,6 +13,10 @@ module.exports = (grunt) ->
     'client/js/**/*.coffee'
   ]
 
+  specScripts = [
+    'tests/**/*Spec.js'
+  ]
+
   clientDirs = [
     'bower_components/closure-library'
     'client/js'
@@ -42,16 +46,24 @@ module.exports = (grunt) ->
         dest: ''
         ext: '.js'
 
+    karma:
+      unit:
+        configFile: 'config/karma.unit.js'
+        background: true
+
     watch:
       app:
-        files: [lessStyles, coffeeScripts]
-        tasks: ['less:app', 'coffee:app']
+        files: [lessStyles, coffeeScripts, specScripts]
+        tasks: ['less:app', 'coffee:app', 'karma:unit']
       coffee:
         files: coffeeScripts
         tasks: 'coffee:app'
       less:
         files: lessStyles
         tasks: 'less:app'
+      karma:
+        files: [coffeeScripts, specScripts]
+        tasks: ['karma:unit']
 
     closureBuilder:
       options:
@@ -83,7 +95,8 @@ module.exports = (grunt) ->
     # 'coffee:app' # uncomment if you want to compiel CoffeScript on startup
     'closureBuilder:app'
     'closureDepsWriter:app'
+    'karma:unit'
 
     # if you want to watch both coffee and less, use watch:app
-    'watch:less' # watch only less files
+    'watch' # watch only less files
   ]
