@@ -19,12 +19,12 @@ module.exports = (grunt) ->
   ]
 
   clientDirs = [
-    'bower_components/closure-library'
+    'client/libs/closure-library'
     'client/js'
   ]
 
   clientDepsPath = 'client/build/deps.js'
-  clientDepsPrefix = '../../../../'
+  clientDepsPrefix = '../../../../../'
 
   # prefix all client source directories (clientDirs)
   clientDirsPrefixed = []
@@ -68,8 +68,8 @@ module.exports = (grunt) ->
 
     closureBuilder:
       options:
-        closureLibraryPath: 'bower_components/closure-library'
-        builder: 'bower_components/closure-library/closure/bin/build/closurebuilder.py'
+        closureLibraryPath: 'client/libs/closure-library'
+        builder: 'client/libs/closure-library/closure/bin/build/closurebuilder.py'
         namespaces: 'App.bootstrap'
         compile: false
         compilerOpts:
@@ -85,8 +85,8 @@ module.exports = (grunt) ->
 
     closureDepsWriter:
       options:
-        closureLibraryPath: 'bower_components/closure-library'
-        depswriter: 'bower_components/closure-library/closure/bin/build/depswriter.py'
+        closureLibraryPath: 'client/libs/closure-library'
+        depswriter: 'client/libs/closure-library/closure/bin/build/depswriter.py'
         root_with_prefix: clientDirsPrefixed
       app:
         dest: clientDepsPath
