@@ -4,12 +4,12 @@
 	"dependencies": {
 		"closure-library": "git://github.com/jarib/google-closure-library.git",
 		"closure-compiler": "http://closure-compiler.googlecode.com/files/compiler-latest.zip",
-		"angularjs": "https://github.com/angular/bower-angular.git",
-		"bootstrap": "https://github.com/twitter/bootstrap.git",
+		"angular": "1.0.7",
+		"bootstrap": "2.3.2",
 		"angular-bootstrap": "0.2.0"
 	},
 	"devDependencies": {
-		"jasmine": "https://github.com/pivotal/jasmine.git",
-		"angular-mocks": "https://github.com/angular/bower-angular-mocks.git"
+		"jasmine": "1.3.1",
+		"angular-mocks": "1.0.7"
 	}
 }
