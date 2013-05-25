@@ -91,12 +91,11 @@ module.exports = (grunt) ->
         dest: clientDepsPath
 
   grunt.registerTask 'default', [
-    'less:app'
+    # 'less:app'
     # 'coffee:app' # uncomment if you want to compiel CoffeScript on startup
     'closureBuilder:app'
     'closureDepsWriter:app'
-    'karma:unit'
 
     # if you want to watch both coffee and less, use watch:app
-    'watch' # watch only less files
+    'watch:less' # watch only less files
   ]

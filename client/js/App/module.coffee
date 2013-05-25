@@ -8,7 +8,7 @@ module = angular.module 'App', []
 module.controller 'App', App.AppController
 module.controller 'Libraries', App.LibrariesController
 
-module.filter 'webalize', () -> App.webalize
+module.filter 'webalize', -> App.webalize
 
 module.config ($locationProvider, $routeProvider) ->
   $routeProvider.when '/',
