@@ -11,6 +11,7 @@ module.exports = (grunt) ->
 
   coffeeScripts = [
     'client/js/**/*.coffee'
+    'tests/**/*.coffee'
   ]
 
   specScripts = [
@@ -33,8 +34,8 @@ module.exports = (grunt) ->
   grunt.initConfig
     less:
       app:
-        src: 'client/css/compile.less'
-        dest: 'client/build/app.css'
+        files:
+          'client/build/app.css': 'client/css/compile.less'
 
     coffee:
       app:
@@ -91,7 +92,7 @@ module.exports = (grunt) ->
         dest: clientDepsPath
 
   grunt.registerTask 'default', [
-    # 'less:app'
+    'less:app'
     # 'coffee:app' # uncomment if you want to compiel CoffeScript on startup
     'closureBuilder:app'
     'closureDepsWriter:app'
