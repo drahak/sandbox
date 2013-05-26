@@ -42,7 +42,6 @@ module.exports = (grunt) ->
         options:
           sourceMap: true
         expand: true
-        # cwd: '/'
         src: coffeeScripts
         dest: ''
         ext: '.js'
@@ -70,12 +69,13 @@ module.exports = (grunt) ->
       options:
         closureLibraryPath: 'client/libs/closure-library'
         builder: 'client/libs/closure-library/closure/bin/build/closurebuilder.py'
+        compilerFile: 'client/libs/closure-compiler/compiler.jar'
         namespaces: 'App.bootstrap'
-        compile: false
+        compile: true
         compilerOpts:
-          compilation_level: 'ADVANCED_OPTIMIZATIONS'
+          compilation_level: 'WHITESPACE_ONLY'
           define: ['"goog.DEBUG=false"']
-          warning_level: 'verbose'
+          warning_level: 'VERBOSE'
           output_wrapper: '(function(){%output%}).call(this);'
         execOpts:
           maxBuffer: 999999 * 1024
