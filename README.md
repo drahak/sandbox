@@ -2,6 +2,11 @@ AngularJS frontend sandbox ![dependencies](https://david-dm.org/drahak/sandbox.p
 ==================================
 This repository is being developed.
 
+#### Content table
+- [Requirements](#requirements)
+- [Grunt](#grunt)
+- [Tests](#tests)
+
 Requirements
 ------------
 Actually you will only need to download [Node.js](http://nodejs.org/). NodeJS provides npm (Node Package Manager) which handles all dependencies. The project depends on these libraries/tools:
