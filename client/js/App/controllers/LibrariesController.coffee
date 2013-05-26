@@ -1,5 +1,7 @@
 goog.provide 'App.LibrariesController'
 
+goog.require 'App'
+
 class App.LibrariesController
   constructor: (@$scope) ->
     $scope.libraries = [
@@ -37,3 +39,5 @@ class App.LibrariesController
     ]
 
 App.LibrariesController.$inject = ['$scope']
+
+App.module.controller 'Libraries', App.LibrariesController

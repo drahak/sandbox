@@ -1,5 +1,7 @@
 goog.provide 'App.AppController'
 
+goog.require 'App'
+
 class App.AppController
 
   ###*
@@ -17,3 +19,5 @@ class App.AppController
       path == $location.path()
 
 App.AppController.$inject = ['$scope', '$location']
+
+App.module.controller 'App', App.AppController
