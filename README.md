@@ -14,6 +14,8 @@ Actually you will only need to download [Node.js](http://nodejs.org/). NodeJS pr
 - **[Node.js (and its NPM)](http://nodejs.org/)**
 - **[Bower](https://github.com/bower/bower)** - needs to be isntalled by executing: `npm install -g bower`
 - **[AngularJS](http://angularjs.org/)** - provides great implementation of DI, MVC, templating system and so on (downloaded using Bower)
+- **[AngularJS bootstrap](http://angular-ui.github.io/bootstrap/)** - implements TWB in angular way (downloaded using Bower)
+- **[Twitter Bootstrap](http://twitter.github.io/bootstrap/)** - makes it simple to build UI (downloaded using Bower)
 - **[Google Closure](https://developers.google.com/closure/)** - JavaScript framework by Google, see also [Google Closure Cheatsheet](http://www.closurecheatsheet.com/) (downloaded using Bower)
 - **[Jasmine](http://pivotal.github.io/jasmine/)** - realy awesome and easy-to-use BDD testing framework (downloaded by NPM)
 - **[Karma](http://karma-runner.github.io/)** - Jasmine (or whatever) test runner (downloaded using NPM)
@@ -22,11 +24,15 @@ Actually you will only need to download [Node.js](http://nodejs.org/). NodeJS pr
 
 Installation
 ------------
-Even project depends on these libraries/tools it's actually very simple to install it. If you alreadt have installed NodeJS go to the command line to project root and execute following commands:h
+Grab the source from this repository.
+
+	git clone https://github.com/drahak/sandbox.git
+
+Then manage project dependencies. Although project depends on so many libraries/tools it's actually very simple to manage them. Since you have NodeJS installed you also have NPM which is Node Package Manager. To install dependencies just execute one of following commands.
 
 	npm install --safe-dev & bower install --dev
 
-Or execute `scripts/install.(bat|sh)` script.
+Or `scripts/install.(bat|sh)` script.
 
 Grunt
 -----
@@ -72,7 +78,7 @@ Which is pretty same as:
 All tests are executed everytime you change any file in project (test or coffee file).
 
 ### End-to-end tests
-Are also very important to check if all application functions are accessible. There isn't set auto watch mode by default, but you can change it in `config/karma-e2e.coffee` file. Tests are located in `tests/e2e/**/*.js`. Again compile all coffee scripts before you run tests. To do so use `coffee:app` and then:
+These are also very important to check if all application functions are accessible. There isn't set auto watch mode by default, but you can change it in `config/karma-e2e.coffee` file. Tests are located in `tests/e2e/**/*.js`. Again compile all coffee scripts before you run tests. To do so use `coffee:app` and then:
 
 	karma start config/karma-e2e.js
 
