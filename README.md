@@ -4,6 +4,7 @@ This repository is being developed.
 
 #### Content table
 - [Requirements](#requirements)
+- [Installation](#installation)
 - [Grunt](#grunt)
 - [Tests](#tests)
 
