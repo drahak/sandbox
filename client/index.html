@@ -27,6 +27,8 @@
 	<body ng-controller="App">
 		<script type="text/javascript">
 			App.bootstrap();
+			// Because of e2e test runner
+			document.body.setAttribute('ng-app', 'App');
 		</script>
 
 		<div class="container">
