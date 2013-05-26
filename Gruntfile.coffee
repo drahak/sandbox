@@ -12,6 +12,7 @@ module.exports = (grunt) ->
   coffeeScripts = [
     'client/js/**/*.coffee'
     'tests/**/*.coffee'
+    'config/*.coffee'
   ]
 
   specScripts = [
