@@ -51,3 +51,26 @@ There is also default grunt task which runs `less:app`, `closureBuilder:app`, `c
 
 	grunt
 
+Tests
+=====
+Tests are very important for development of every single application. I use JasmineBDD to test my code and Karma test runner to run my unit and e2e tests. If you want you can use any other testing framework (e.g. mocha). It's not a problem to use it with Karma test runner.
+
+### Unit tests
+Unit tests configuration is in `config/karma-unit.coffee` file. Default setting executes all `tests/unit/**/*Spec.js`. Note the .js extension. If you want to run tests, both unit tests configuration file and test files must be compiled into JavaScript (e.g. using Grunt `coffee:app` task). To run tests with karma execute one of following commands:
+
+	karma start config/karma-unit.js
+
+Which is pretty same as:
+
+	scripts/karma-unit.(bat|sh)
+
+All tests are executed everytime you change any file in project (test or coffee file).
+
+### End-to-emd tests
+Are also very important to check if all application functions are accessible. There isn't set auto watch mode by default, but you can change it in `config/karma-e2e.coffee` file. Tests are located in `tests/e2e/**/*.js`. Again compile all coffee scripts before you run tests. To do so use `coffee:app` and then:
+
+	karma start config/karma-e2e.js
+
+Or execute batch or shell script:
+
+	scripts/karma-e2e.(bat|sh)

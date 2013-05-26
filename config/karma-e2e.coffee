@@ -6,9 +6,9 @@
   'tests/e2e/**/*.js'
 ]
 
-@autoWatch = true
+@autoWatch = false
 
-@singleRun = false
+@singleRun = true
 
 @browsers = ['Chrome']
 
