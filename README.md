@@ -40,9 +40,14 @@ To compile LESS file import it to the `client/css/compile.less` file. Then the g
 	grunt watch:less
 
 ### Google Closure
-Grunt can build dependencies or whole app for you. task `closureDepsWriter:app` writes dependencies into `client/build/deps.js`, `closureBuilder` builds application into `client/build/app.js`
+Grunt can build dependencies or whole app for you. task `closureDepsWriter:app` writes dependencies into `client/build/deps.js`, `closureBuilder:app` task builds application into `client/build/app.js`
 
 	grunt closureDepsWriter:app
 	grunt closureBuilder:app
 
+
+### Default Grunt task
+There is also default grunt task which runs `less:app`, `closureBuilder:app`, `closureDepsWriter:app` and starts watcher `watch:less`. To to so, just run `grunt` from project root.
+
+	grunt
 
