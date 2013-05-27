@@ -19,4 +19,4 @@ App.webalize = (s) ->
   s2.replace(/[^a-z0-9_]+/g, '-').replace(/^-|-$/g, '');
 
 
-@App.module.filter 'webalize', -> App.webalize
+App.module.filter 'webalize', -> App.webalize

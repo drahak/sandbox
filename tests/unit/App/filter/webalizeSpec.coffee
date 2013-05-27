@@ -1,4 +1,5 @@
 goog.require 'App'
+goog.require 'App.webalize'
 
 describe 'Webalize filter', ->
   filter = null
