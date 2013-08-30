@@ -15,7 +15,7 @@
 @plugins = [
   'karma-jasmine'
   'karma-chrome-launcher'
-  # 'karma-firefox-launcher' # uncomment if you want to run text in firefox. Run command: npm i karma-firefox-launcher
+  # 'karma-firefox-launcher' # uncomment if you want to run tests in firefox. Run command: npm i karma-firefox-launcher
 ]
 
 @autoWatch = true

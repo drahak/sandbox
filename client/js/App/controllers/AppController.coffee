@@ -1,15 +1,10 @@
 goog.provide 'App.AppController'
 
-goog.require 'App'
-
-class App.AppController
-
-  ###*
-  * @constructor
-  * @param {Object} scope
-  * @param {$location} $location
-  ###
-  constructor: (@$scope, $location) ->
+###*
+  * Application controller
+  * @author Drahomír Hanák
+###
+App.AppController = (@$scope, $location) ->
 
     ###*
     * Is given path current
@@ -19,5 +14,3 @@ class App.AppController
       path == $location.path()
 
 App.AppController.$inject = ['$scope', '$location']
-
-App.module.controller 'App', App.AppController

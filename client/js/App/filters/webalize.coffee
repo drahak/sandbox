@@ -1,7 +1,5 @@
 goog.provide 'App.webalize'
 
-goog.require 'App'
-
 nodiac = { 'á': 'a', 'č': 'c', 'ď': 'd', 'é': 'e', 'ě': 'e', 'í': 'i', 'ň': 'n', 'ó': 'o', 'ř': 'r', 'š': 's', 'ť': 't', 'ú': 'u', 'ů': 'u', 'ý': 'y', 'ž': 'z' }
 
 ###*
@@ -17,6 +15,3 @@ App.webalize = (s) ->
     else
       s2 += c
   s2.replace(/[^a-z0-9_]+/g, '-').replace(/^-|-$/g, '');
-
-
-App.module.filter 'webalize', -> App.webalize

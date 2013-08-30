@@ -1,9 +1,9 @@
 {
 	"name": "drahak/sandbox",
 	"description": "AngularJS, Google Closure with Jasmine sandbox to make SPA development easier",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"dependencies": {
-		"closure-library": "git://github.com/Steida/google-closure-library.git",
+		"closure-library": "https://github.com/steida/google-closure-library.git",
 		"closure-compiler": "http://closure-compiler.googlecode.com/files/compiler-latest.zip",
 		"angular": "1.0.7",
 		"angular-resource": "1.0.7",
