@@ -86,3 +86,5 @@ These are also very important to check if all application functions are accessib
 Or execute batch or shell script:
 
 	tests/e2e.(bat|sh)
+
+To run e2e tests you will need Selenium stand-alone server. It can be downloaded and started by script `scripts/selenium-server`.
