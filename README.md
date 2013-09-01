@@ -74,15 +74,15 @@ Unit tests configuration is in `config/karma-unit.coffee` file. Default setting 
 
 Which is pretty same as:
 
-	scripts/karma-unit.(bat|sh)
+	tests/unit.(bat|sh)
 
 All tests are executed everytime you change any file in project (test or coffee file).
 
 ### End-to-end tests
-These are also very important to check if all application functions are accessible. There isn't set auto watch mode by default, but you can change it in `config/karma-e2e.coffee` file. Tests are located in `tests/e2e/**/*.js`. Again compile all coffee scripts before you run tests. To do so use `coffee:app` and then:
+These are also very important to check if all application functions are accessible. In sandbox I'm using Angular Protractor runner for Selenium WebDriverJS. Tests are located in `tests/e2e/**/*.js`. Again compile all coffee scripts before you run tests. To do so use `coffee:app` and then:
 
-	karma start config/karma-e2e.js
+	node_modules/.bin/protractor tests/config/e2e.js
 
 Or execute batch or shell script:
 
-	scripts/karma-e2e.(bat|sh)
+	tests/e2e.(bat|sh)

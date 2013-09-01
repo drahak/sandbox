@@ -21,8 +21,6 @@
   "devDependencies": {
     "karma": "0.9.2",
 	"karma-jasmine": "0.0.1",
-	"karma-ng-scenario": "0.0.1",
-	"karma-chrome-launcher": "0.0.1",
     "grunt": "0.4.1",
     "grunt-karma": "0.4.4",
     "grunt-closure-tools": "0.8.3",

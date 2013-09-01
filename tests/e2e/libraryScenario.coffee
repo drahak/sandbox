@@ -1,11 +1,14 @@
-describe 'Library page view', ->
+util = require 'util'
 
-  beforeEach ->
-    browser().navigateTo '/sandbox/client/libraries'
+describe 'Library page view', ->
+  ptor = protractor.getInstance()
 
   it 'filters library list', ->
-    expect(repeater('#libraries li').count()).toBe 6
+    ptor.get 'http://localhost/sandbox/client/libraries'
 
-    input('search').enter 'language'
+    search = ptor.findElement protractor.By.input 'search'
+    search.clear()
+    search.sendKeys 'AngularJS'
 
-    expect(repeater('#libraries li').count()).toBe 1
+    library = ptor.findElement protractor.By.repeater('library in libraries').row(1)
+    expect(library.getText()).toContain 'AngularJS'

@@ -6,4 +6,4 @@ echo ""
 echo "Starting Karma Server (http://vojtajina.github.com/karma)"
 echo "-------------------------------------------------------------------"
 
-karma start $BASE_DIR/../config/karma-e2e.js $*
+karma start $BASE_DIR/config/unit.js $*

@@ -1,6 +1,6 @@
 module.exports = (config) ->
   config.set
-    basePath: '../'
+    basePath: '../../'
     frameworks: ['jasmine']
     files: [
       {pattern: 'client/libs/closure-library/closure/goog/base.js', watched: false, included: true, served: true}
